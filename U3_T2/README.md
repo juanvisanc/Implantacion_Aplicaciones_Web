@@ -3,10 +3,6 @@
 1. Dado un array formado por 4 nombre de ciudad "San Cristóbal","Cucuta","Maracaibo","Caracas" crear un página web similar a la siguiente utilzando bucles para recorrer vectores y las funciones que estimes necesarias.
 Ten en cuenta que debes respetar el formato.
 
-
-
-Vectores asociativos
-
 2. Crear dos array asociativos con los siguiente elementos:
 ("2222222X" => "Pepe" ,"3333333X" =>"Manuel", "4444444X" => "José", "5555555X" => "Rosa")
 ("2222222X" => "Pérez" ,"3333333X" =>"Jiménez", "4444444X" => "Martínez", "5555555X" => "Rodríguez )
