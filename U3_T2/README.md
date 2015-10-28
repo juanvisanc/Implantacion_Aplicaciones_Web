@@ -5,7 +5,7 @@ Ten en cuenta que debes respetar el formato.
 
 
 
-###Vectores asociativos
+Vectores asociativos
 
 2. Crear dos array asociativos con los siguiente elementos:
 ("2222222X" => "Pepe" ,"3333333X" =>"Manuel", "4444444X" => "José", "5555555X" => "Rosa")
