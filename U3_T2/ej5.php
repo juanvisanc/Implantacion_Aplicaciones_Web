@@ -5,6 +5,7 @@
     <title></title>
   </head>
   <body>
+    <ol>
     <?php
         $multiplos=[];
         $cont=0;
@@ -12,10 +13,13 @@
           if ($i%77==0) {
             $multiplos[]=$i;
             $cont++;
+            echo "<li>$i</li>";
           }
+
         }
         //para ver el array:
         var_dump($multiplos);
      ?>
+   </ol>
   </body>
 </html>
