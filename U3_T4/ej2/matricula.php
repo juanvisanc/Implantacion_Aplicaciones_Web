@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
@@ -34,17 +35,39 @@
       }
 
     </style>
+    <script>
+    //He considerado que se matricula de primero o de segundo, no puede compatibilizar
+      $(function() {
+        $('#dos').hide();
+        $('#uno').hide();
+          $("select").change(function(event) {
+               if($(this).val() == "primero"){
+                 $('#dos').hide();
+                 $('.check2').attr('checked', false);
+                 $('#uno').show();
+               }
+              else if($(this).val() == "segundo"){
+                  $('#uno').hide();
+                  $('.check1').attr('checked', false);
+                  $('#dos').show();
+        }
+      });
+    });
+    </script>
   </head>
   <body>
       <?php
-          $nombre=$_POST["Nombre"];
-          $apellido=$_POST["Apellidos"];
-          $dni=$_POST["dni"];
-          $curso=$_POST["curso"];
-          $asig=$_POST["asignatura"];
-          $beca=$_POST["beca"];
+
 
           if (isset($_POST["asignatura"])) {
+
+            $nombre=$_POST["Nombre"];
+            $apellido=$_POST["Apellidos"];
+            $dni=$_POST["dni"];
+            $curso=$_POST["curso"];
+            $asig=$_POST["asignatura"];
+            $beca=$_POST["beca"];
+
            echo "<div class='contenedor'>";
            echo "<h2>Resumen de la matrícula</h2>";
            echo "<p class='resumen'>El alumno $nombre $apellido, ";
@@ -208,36 +231,37 @@
                  <legend style="border:solid 3px #F5F6CE;background:white">Solicitud</legend>
                  <p><span>El alumno desea matricularse en:</span>
                  <select name="curso"></p>
-                   <option value="primero">1º ASIR</option>
-                   <option value="segundo">2º ASIR</option>
+                   <option value="">--Selecciona curso--</option>
+                   <option class="anio" value="primero">1º ASIR</option>
+                   <option class="anio" value="segundo">2º ASIR</option>
                  </select>
-                   <div class="asig">
+                   <div class="asig" id="uno">
                      <table>
                        <thead>
                          <tr><th>Asignatiras de 1º:</th></tr>
                        </thead>
                        <tbody>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="PAR">Planificación y Administración de Redes</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="ISO">Implantación de Sistemas Operativos</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="FH">Fundamentos de Hardware</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="GBD">Gestión de Bases de Datos</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="LM">Lenguajes de Marca y Sistemas de Gestión de información</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="FOL">Formación y Orientación Laboral</input></td></tr>
+                         <tr><td><input class="check1" type="checkbox" name="asignatura[]" value="PAR">Planificación y Administración de Redes</input></td></tr>
+                         <tr><td><input class="check1" type="checkbox" name="asignatura[]" value="ISO">Implantación de Sistemas Operativos</input></td></tr>
+                         <tr><td><input class="check1" type="checkbox" name="asignatura[]" value="FH">Fundamentos de Hardware</input></td></tr>
+                         <tr><td><input class="check1" type="checkbox" name="asignatura[]" value="GBD">Gestión de Bases de Datos</input></td></tr>
+                         <tr><td><input class="check1" type="checkbox" name="asignatura[]" value="LM">Lenguajes de Marca y Sistemas de Gestión de información</input></td></tr>
+                         <tr><td><input class="check1" type="checkbox" name="asignatura[]" value="FOL">Formación y Orientación Laboral</input></td></tr>
                        </tbody>
                      </table>
                    </div>
-                   <div class="asig">
+                   <div class="asig" id="dos">
                      <table>
                        <thead>
                          <tr><th>Asignatiras de 2º:</th></tr>
                        </thead>
                        <tbody>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="ASO">Administración de Sistemas Operativos</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="SRI">Servicios de Red e Internet</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="IAW">Implantación de Aplicaciones web</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="ASGBD">Administración de Sistemas Gestores de bases de datos</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="SAD">Seguridad y Alta Disponibilidad</input></td></tr>
-                         <tr><td><input type="checkbox" name="asignatura[]" value="EMP">Empresa e iniciativa emprendedora</input></td></tr>
+                         <tr><td><input class="check2" type="checkbox" name="asignatura[]" value="ASO">Administración de Sistemas Operativos</input></td></tr>
+                         <tr><td><input class="check2" type="checkbox" name="asignatura[]" value="SRI">Servicios de Red e Internet</input></td></tr>
+                         <tr><td><input class="check2" type="checkbox" name="asignatura[]" value="IAW">Implantación de Aplicaciones web</input></td></tr>
+                         <tr><td><input class="check2" type="checkbox" name="asignatura[]" value="ASGBD">Administración de Sistemas Gestores de bases de datos</input></td></tr>
+                         <tr><td><input class="check2" type="checkbox" name="asignatura[]" value="SAD">Seguridad y Alta Disponibilidad</input></td></tr>
+                         <tr><td><input class="check2" type="checkbox" name="asignatura[]" value="EMP">Empresa e iniciativa emprendedora</input></td></tr>
                        </tbody>
                      </table>
                    </div>
