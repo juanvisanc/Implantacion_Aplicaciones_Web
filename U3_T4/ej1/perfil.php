@@ -6,7 +6,7 @@
   </head>
     <style media="screen">
       body{
-        width: 700px;
+        width: 800px;
         margin: 0 auto;
         margin-top: 50px;
       }
@@ -15,8 +15,17 @@
           margin-left: 10px;
       }
       img{
+        margin-top: 10px;
+        border: 1px solid black;
         width: 200px;
         height: 300px;
+      }
+      .contenedor{
+        border-radius: 15px 15px 15px 15px;
+        border: 2px solid black;
+        width: 550px;
+        height: 320px;
+        background-color: #c5cae9;
       }
     </style>
   <body>
@@ -90,6 +99,7 @@
 
               $foto=$_GET['id'];
               $datos=$alumnos[$_GET["id"]];
+              echo "<div class='contenedor'>";
               echo "<div class='fotos'>";
               echo "<img src='$foto'.png'>";
               echo "</div><div class='datos'>";
@@ -105,7 +115,7 @@
 
               }
 
-              echo"</div>";
+              echo"</div></div>";
           }
      ?>
   </body>
