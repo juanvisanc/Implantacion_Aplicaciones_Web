@@ -6,7 +6,7 @@
   </head>
   <body>
     <?php
-      echo "bien";
+      
      ?>
   </body>
 </html>
