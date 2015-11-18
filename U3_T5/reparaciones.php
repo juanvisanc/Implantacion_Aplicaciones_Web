@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style media="screen">
+      body{
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      img{
+        height: 40px;
+        width: 40px;
+      }
+      table{
+        text-align:center;
+      }
+      input{
+        float: right;
+        margin-top: 10px;
+      }
+      </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <?php
+          $connection = new mysqli("localhost", "tf", "12345", "TalleresFaber");
+
+            if ($connection->connect_errno) {
+              printf("Connection failed: %s\n", $mysqli->connect_error);
+              exit();
+          }
+
+          if ($result = $connection->query("SELECT * FROM REPARACIONES;")) {
+
+    ?>
+        <table style="border:1px solid black">
+          <thead>
+            <tr>
+              <th>Reparación</th>
+              <th>Matrícula</th>
+              <th>Fecha de entrada</th>
+              <th>Kilómetros</th>
+              <th>Avería</th>
+              <th>Fecha de salida</th>
+              <th>Reparado</th>
+              <th>Observaciones</th>
+              <th>EDITAR</th>
+              <th>BORRAR</th>
+              <th>AÑADIR PIEZA</th>
+              <th>AÑADIR MECÁNICO</th>
+          </thead>
+
+            <?php
+
+
+          while($obj = $result->fetch_object()) {
+
+              echo "<tr>";
+              echo "<td>".$obj->IdReparacion."</td>";
+              echo "<td>".$obj->Matricula."</td>";
+              echo "<td>".$obj->FechaEntrada."</td>";
+              echo "<td>".$obj->Km."</td>";
+              echo "<td>".$obj->Averia."</td>";
+              echo "<td>".$obj->FechaSalida."</td>";
+              echo "<td>".$obj->Reparado."</td>";
+              echo "<td>".$obj->Observaciones."</td>";
+              echo "<td><a href='editar.php?id=$obj->IdReparacion'><img src='editar.png'></a></td>";
+              echo "<td><a href='borrar.php?id=$obj->IdReparacion'><img src='borrar.jpg'></a></td>";
+              echo "<td><img src='pieza.jpg'></td>";
+              echo "<td><img src='mecanico.jpg'></td>";
+              echo "</tr>";
+          }
+
+          echo "</table>";
+          $result->close();
+          unset($obj);
+          unset($connection);
+
+
+      }
+
+    ?>
+    <a href="crear.php"><input type="button" name="nuevar" value="Nueva Reparacion"></a>
+  </body>
+</html>
