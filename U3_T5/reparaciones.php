@@ -15,9 +15,15 @@
       table{
         text-align:center;
       }
+      th,td{
+        border: 1px solid #000;
+      }
       input{
         float: right;
         margin-top: 10px;
+      }
+      h1{
+        text-align: center;
       }
       </style>
     <meta charset="utf-8">
@@ -35,6 +41,7 @@
           if ($result = $connection->query("SELECT * FROM REPARACIONES;")) {
 
     ?>
+      <h1>Reparaciones de 'Talleres Faber'</h1>
         <table style="border:1px solid black">
           <thead>
             <tr>

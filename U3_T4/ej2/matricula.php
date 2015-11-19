@@ -147,7 +147,7 @@
                                <td>Fecha de nacimiento:</td>
                            </tr>
                            <tr>
-                               <td><input type="text" name="nacimiento"></td>
+                               <td><input type="text" name="nacimiento" value="hoy"></td>
                                <td><input type="email" name="correo"></input></td>
                                <td><input type= "date" name="fechanac."></td>
                            </tr>
