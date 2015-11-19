@@ -46,8 +46,8 @@
             }
           }
 
-          echo '<form method="post" action="#">
-              <fieldset style= "background-color:#F2F2F2">
+          echo "<form method='post' action='#'>
+              <fieldset style= 'background-color:#F2F2F2'>
                 <table>
                   <tbody>
                     <tr>
@@ -56,24 +56,24 @@
                       <td>Fecha de salida:</td>
                     </tr>
                     <tr>
-                      <td><input type="text" name="matri" value="'.$mat .'" maxlength="8"</td>
-                      <td><input type="date" name="fechaEnt" value="'.$fe1 .'"</td>
-                      <td><input type="date" name="fechaSal" value="'.$fe2 .'"</td>
+                      <td><input type='text' name='matri' value='$mat' maxlength='8'</td>
+                      <td><input type='date' name='fechaEnt' value='$fe1'</td>
+                      <td><input type='date' name='fechaSal' value='$fe2'</td>
                     </tr>
                     <tr>
-                      <td colspan="2">Averia:</td>
+                      <td colspan='2'>Averia:</td>
                       <td>Kms:</td>
                     </tr>
                     <tr>
-                      <td colspan="2"><input type="text" name="averia" value="'.$ave .'" maxlength="200" size="50"</td>
-                      <td><input type="number" step="any" min="0" value="'.$km.'"</td>
+                      <td colspan='2'><input type='text' name='averia' value='$ave' maxlength='200' size='50'</td>
+                      <td><input type='number' step='any' min='0' value='$km'</td>
                     </tr>
                     <tr>
                       <td>Reparado:</td>
                     </tr>
                     <tr>
-                      <td><input type="radio" name="beca" value="si" required>Sí</input>
-                      <input type="radio" name="beca" value="no" required>No</input>
+                      <td><input type='radio' name='beca' value=1 required>Sí</input>
+                      <input type='radio' name='beca' value=0 required>No</input>
                     </tr>
                     <tr>
                       <td>Observaciones:</td>
@@ -81,8 +81,12 @@
                   </tbody>
 
                 </table>
-                <textarea rows="4" cols="50" maxlength="250">'.$obs.'</textarea>
-                ';
+                <textarea rows='4' cols='50' maxlength='250'>$obs</textarea>
+
+                <input type='submit' name='editar' value='Realizar modificaciones'>
+                ";
+
+
 
       }?>
   </body>
