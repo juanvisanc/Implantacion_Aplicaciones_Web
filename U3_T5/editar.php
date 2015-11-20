@@ -139,7 +139,7 @@
                 </table>
                 <textarea rows='4' cols='50' maxlength='250' name='obs'>$obs</textarea>
 
-                <p><input type='submit' name='editar' value='Realizar modificaciones'></p>
+                <p><input type='submit' name='editar' class='btn waves-effect waves-light' value='Realizar modificaciones'></p>
                 </fieldset>
                 ";
 
