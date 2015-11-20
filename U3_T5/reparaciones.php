@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <style media="screen">
       body{
         width: 1200px;
@@ -42,7 +43,7 @@
 
     ?>
       <h1>Reparaciones de 'Talleres Faber'</h1>
-        <table style="border:1px solid black">
+        <table class="striped" class="centered" style="border:1px solid black">
           <thead>
             <tr>
               <th>Reparación</th>
@@ -75,8 +76,8 @@
               echo "<td>".$obj->Observaciones."</td>";
               echo "<td><a href='editar.php?id=$obj->IdReparacion'><img src='editar.png'></a></td>";
               echo "<td><a href='borrar.php?id=$obj->IdReparacion'><img src='borrar.jpg'></a></td>";
-              echo "<td><img src='pieza.jpg'></td>";
-              echo "<td><img src='mecanico.jpg'></td>";
+              echo "<td><a href='pieza.php?id=$obj->IdReparacion'><img src='pieza.jpg'></td>";
+              echo "<td><a href='mecanico.php?id=$obj->IdReparacion'><img src='mecanico.jpg'></td>";
               echo "</tr>";
           }
 

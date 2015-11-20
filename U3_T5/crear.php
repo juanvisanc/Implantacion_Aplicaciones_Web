@@ -29,7 +29,7 @@
                 <table>
                   <tbody>
                     <tr>
-                      <td style='display:none'><input type='text' name='id' value='$iden'></td>
+                      <td style='display:none'><input type='text' name='id' value='$iden' readonly='readonly'></td>
                       <td>Matricula:</td>
                       <td>Fecha de entrada:</td>
                       <td>Fecha de salida:</td>
@@ -62,8 +62,8 @@
                       <td>Kms:</td>
                     </tr>
                     <tr>
-                      <td colspan='2'><input type='text' name='averia' maxlength='200' size='50'></td>
-                      <td><input type='number' step='any' min='0' name='km'></td>
+                      <td colspan='2'><input type='text' name='averia' maxlength='200' size='50' required></td>
+                      <td><input type='number' step='any' min='0' name='km' required></td>
                     </tr>
                     <tr>
                       <td>Reparado:</td>
@@ -78,7 +78,7 @@
                   </tbody>
 
                 </table>
-                <textarea rows='4' cols='50' maxlength='250' name='obs'></textarea>
+                <textarea rows='4' cols='50' maxlength='250' name='obs'>Sin Comentarios</textarea>
 
                 <p><input type='submit' name='editar' value='Crear reparacion'></p>
 
