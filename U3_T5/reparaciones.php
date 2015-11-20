@@ -13,18 +13,22 @@
         height: 40px;
         width: 40px;
       }
-      table{
+      /*table{
         text-align:center;
-      }
+      }*/
       th,td{
         border: 1px solid #000;
       }
       input{
         float: right;
         margin-top: 10px;
+        margin-bottom: 10px;
       }
       h1{
         text-align: center;
+      }
+      .cabecera{
+        background-color: #e0e0e0;
       }
       </style>
     <meta charset="utf-8">
@@ -43,9 +47,9 @@
 
     ?>
       <h1>Reparaciones de 'Talleres Faber'</h1>
-        <table class="striped" class="centered" style="border:1px solid black">
+        <table class="centered" style="border:1px solid black">
           <thead>
-            <tr>
+            <tr class="card-panel teal lighten-2">
               <th>Reparación</th>
               <th>Matrícula</th>
               <th>Fecha de entrada</th>
@@ -90,6 +94,6 @@
       }
 
     ?>
-    <a href="crear.php"><input type="button" name="nuevar" value="Nueva Reparacion"></a>
+    <a href="crear.php"><input type="button" name="nuevar" value="Nueva Reparacion" class='btn waves-effect waves-light'></a>
   </body>
 </html>

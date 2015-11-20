@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <style media="screen">
       body{
-        width: 600px;
+        width: 1000px;
         margin: 0 auto;
         margin-top: 50px;
       }
@@ -15,6 +17,10 @@
       }
       div{
         float: left;
+      }
+      select{
+        display: inline;
+        width: 300px;
       }
     </style>
     <meta charset="utf-8">
@@ -69,8 +75,11 @@
                       <td>Reparado:</td>
                     </tr>
                     <tr>
-                      <td><input type='radio' name='repar' value=1 required>Sí</input>
-                      <input type='radio' name='repar' value=0 required>No</input>
+                      <td><input type='radio' name='repar' value=1 id='repa' required>
+                        <label for='repa'>Sí</label>
+                      </input>
+                      <input type='radio' name='repar' value=0 id='repa2' required>
+                        <label for='repa2'>No</label></input>
                     </tr>
                     <tr>
                       <td>Observaciones:</td>
@@ -80,7 +89,7 @@
                 </table>
                 <textarea rows='4' cols='50' maxlength='250' name='obs'>Sin Comentarios</textarea>
 
-                <p><input type='submit' name='editar' value='Crear reparacion'></p>
+                <p><input type='submit' name='editar' class='btn waves-effect waves-light' value='Crear reparacion'></p>
 
                 <!--Si matricula esta en post.-->
               <?php else: ?>
