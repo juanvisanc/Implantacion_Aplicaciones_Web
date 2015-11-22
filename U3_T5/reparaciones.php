@@ -78,10 +78,10 @@
               echo "<td>".$obj->FechaSalida."</td>";
               echo "<td>".$obj->Reparado."</td>";
               echo "<td>".$obj->Observaciones."</td>";
-              echo "<td><a href='editar.php?id=$obj->IdReparacion'><img src='editar.png'></a></td>";
-              echo "<td><a href='borrar.php?id=$obj->IdReparacion'><img src='borrar.jpg'></a></td>";
-              echo "<td><a href='pieza.php?id=$obj->IdReparacion'><img src='pieza.jpg'></td>";
-              echo "<td><a href='mecanico.php?id=$obj->IdReparacion'><img src='mecanico.jpg'></td>";
+              echo "<td><a href='editar.php?id=$obj->IdReparacion'><img src='imagenes/editar.png'></a></td>";
+              echo "<td><a href='borrar.php?id=$obj->IdReparacion'><img src='imagenes/borrar.jpg'></a></td>";
+              echo "<td><a href='pieza.php?id=$obj->IdReparacion'><img src='imagenes/pieza.jpg'></td>";
+              echo "<td><a href='mecanico.php?id=$obj->IdReparacion'><img src='imagenes/mecanico.jpg'></td>";
               echo "</tr>";
           }
 
